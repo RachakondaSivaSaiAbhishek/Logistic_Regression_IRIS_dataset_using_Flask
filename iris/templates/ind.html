@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width= device-width,initial-scale=1,shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>IRIS APP</title>
+</head>
+
+<body bgcolor="light green">
+	
+	<center><h1 style="color:grey">𝕴𝖗𝖎𝖘 𝕱𝖑𝖔𝖜𝖊𝖗 𝕮𝖑𝖆𝖘𝖘𝖎𝖋𝖎𝖈𝖆𝖙𝖎𝖔𝖓 𝖚𝖘𝖎𝖓𝖌 𝕸𝖆𝖈𝖍𝖎𝖓𝖊 𝕷𝖊𝖆𝖗𝖓𝖎𝖓𝖌</h1><br><br></center>
+	<div class="container text-center">
+	<form action='/predict' method='POST'>
+		
+		<input type="text" name="spl" placeholder="𝔰𝔢𝔭𝔞𝔩 𝔩𝔢𝔫𝔤𝔱𝔥(𝔠𝔪)" required><br/>
+		<input type="text" name="spw" placeholder="𝔰𝔢𝔭𝔞𝔩 𝔴𝔦𝔡𝔱𝔥(𝔠𝔪)" required><br/>
+		<input type="text" name="ptl" placeholder="𝔭𝔢𝔱𝔞𝔩 𝔩𝔢𝔫𝔤𝔱𝔥(𝔠𝔪)" required><br/>
+		<input type="text" name="ptw" placeholder="𝔭𝔢𝔱𝔞𝔩 𝔴𝔦𝔡𝔱𝔥(𝔠𝔪)" required><br/>
+		<hr/>
+		<button class='btn btn-success'>Predict</button><br/>
+		
+    </form>
+
+	<div class="row">
+		{% if prediction %}
+		<center> <h2 class="text-success" >🍭🎀 𝒻𝓁o𝓌𝑒𝓇 𝒾𝓈 𝒸𝓁𝒶𝓈𝓈𝒾𝒻𝒾𝑒𝒹 𝒶𝓈 🎀🍭:   {{prediction}} </h2> </center>
+		{% endif %}
+	</div>	
+	</div>
+</body>
+</html>
+	
